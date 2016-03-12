@@ -1,6 +1,7 @@
 'use strict';
 
 var path = process.cwd();
+var Challenge = require('../models/challenges');
 
 module.exports = function (app, passport) {
 
@@ -18,6 +19,14 @@ module.exports = function (app, passport) {
   // ==============================================
   app.get('/', function (req, res) {
     res.sendFile(path + '/public/index.html');
+  });
+
+
+  // ==============================================
+  // seed database with challenges
+  // ==============================================
+  app.post('/seed', function(req, res) {
+    console.log('seed body', req.body);
   });
 
 
