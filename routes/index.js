@@ -2,6 +2,7 @@
 
 var path = process.cwd();
 var Challenge = require('../models/challenges');
+var DBHandler = require('../lib/databaseHandler.js');
 
 module.exports = function (app, passport) {
 
@@ -45,6 +46,36 @@ module.exports = function (app, passport) {
       res.json(newChallenge);
     });
 
+  });
+
+
+  // ==============================================
+  // Return all challenges
+  // ==============================================
+  app.get('/challenge', function(req, res) {
+    DBHandler.findAll(function(err, challenges) {
+      if (err) {
+        return res.status(400).json({ error: err });
+      }
+
+      res.json(challenges);
+    });
+  });
+
+
+  // ==============================================
+  // Return a single challenge
+  // ==============================================
+  app.get('/challenge/:id', function(req, res) {
+    var id = req.params.id;
+
+    DBHandler.findById(id, function(err, challenge) {
+      if (err) {
+        return res.status(400).json({ error: err });
+      }
+
+      res.json(challenge);
+    });
   });
 
 
