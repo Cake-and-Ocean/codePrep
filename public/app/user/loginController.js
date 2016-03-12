@@ -1,3 +1,5 @@
-app.controller('LoginController', ['$scope', function($scope) {
-  $scope.name = 'World';
+app.controller('LoginController', ['$scope', '$state', function($scope, $state) {
+  $scope.login = function(){
+    $state.go('home');
+  };
 }]);
