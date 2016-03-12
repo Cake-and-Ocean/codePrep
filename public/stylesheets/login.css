@@ -1,13 +1,13 @@
-body {
+/*body {
   background: url(https://member.virginpulse.com/v2/content/images/LandingPageV3/bg-pattern.png);
   background-position: center;
-}
+}*/
 
-html {
+/*html {
   height: 100%;
-}
+}*/
 
-#content {
+/*#content {
   border-radius: 6px;
   text-align: left;
   margin-top: 15%;
@@ -17,13 +17,13 @@ html {
   padding: 30px 40px 30px 40px;
   box-shadow: 0px 0px 8px #bbb;
   width: 50%;
-}
+}*/
 
-.heading {
+/*.heading {
   color: #008aa2;
-}
+}*/
 
-.btn-default {
+/*.btn-default {
   padding: 5px 17px;
   background-color: #ec9702;
   border-color: #ffc254;
@@ -31,9 +31,9 @@ html {
   font-size: 16px;
   color: white;
   width: 80%;
-}
+}*/
 
-.form-control {
+/*.form-control {
   border-radius: 100px;
   background-color: #eee;
-}
+}*/
