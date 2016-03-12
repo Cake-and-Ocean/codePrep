@@ -22,6 +22,8 @@
     "bootstrap": "~3.3.6",
     "jquery": "~2.2.1",
     "font-awesome": "fontawesome#~4.5.0",
-    "codemirror": "~5.12.0"
+    "codemirror": "~5.12.0",
+    "jshint": "~2.9.1",
+    "jsonlint": "~1.6.0"
   }
 }

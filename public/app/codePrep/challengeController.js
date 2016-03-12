@@ -13,6 +13,12 @@ app.controller('ChallengeController', ['$scope', function($scope) {
     theme: "monokai"
   });
 
+  $scope.code = 'howdy there';
+  $scope.test = 'testy';
 
-  
+  $scope.log = function(){
+    console.log($scope.code);
+    console.log($scope.test);
+  };
+
 }]);
