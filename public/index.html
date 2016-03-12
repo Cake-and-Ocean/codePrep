@@ -6,18 +6,53 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+
+    <!-- CODEMIRROR -->  
+    <link rel="stylesheet" href="lib/codemirror/lib/codemirror.css">
+    <link href="lib/codemirror/theme/monokai.css" rel="stylesheet" type="text/css">
+    <!-- <link href="lib/codemirror/doc/docs.css" rel="stylesheet" type="text/css"> -->
+    <link href="lib/codemirror/lib/codemirror.css" rel="stylesheet" type="text/css">
+    <link href="lib/codemirror/addon/lint/lint.css" rel="stylesheet" type="text/css">
+    <link href="lib/codemirror/addon/fold/foldgutter.css" rel="stylesheet" type="text/css">
 
   </head>
 
   <body ng-app="codePrep">
     <div ui-view></div>
   </body>
-  
+
   <script src="lib/angular/angular.min.js"></script>
   <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+  <!-- CODEMIRROR -->
+  <script src="lib/codemirror/lib/codemirror.js"></script>
+  <script src="lib/codemirror/mode/javascript/javascript.js"></script>
+  <script src="lib/codemirror/addon/dialog/dialog.js"></script>
+  <script src="lib/codemirror/addon/edit/closebrackets.js"></script>
+  <script src="lib/codemirror/addon/edit/matchbrackets.js"></script>
+  <script src="lib/codemirror/addon/lint/lint.js"></script>
+  <script src="lib/codemirror/addon/lint/javascript-lint.js"></script>
+  <script src="lib/codemirror/addon/fold/foldcode.js"></script>
+  <script src="lib/codemirror/addon/fold/foldgutter.js"></script>
+  <script src="lib/codemirror/addon/fold/brace-fold.js"></script>
+  <script src="lib/codemirror/addon/fold/xml-fold.js"></script>
+  <script src="lib/codemirror/addon/fold/markdown-fold.js"></script>
+  <script src="lib/codemirror/addon/fold/comment-fold.js"></script>
+  <script src="lib/codemirror/keymap/sublime.js"></script>
+  <script src="lib/codemirror/mode/javascript/javascript.js"></script>
+  <script src="lib/jshint/dist/jshint.js"></script>
+  <script src="lib/jsonlint/web/jsonlint.js"></script>
+  <script src="http://repl.it/lib/api.js" type="text/javascript" charset="utf-8"></script>
+  
+
   <script src="app.js"></script>
   <script src="app/landing/landingController.js"></script>
+  <script src="app/user/loginController.js"></script>
+  <script src="app/user/signupController.js"></script>
+  <script src="app/user/profileController.js"></script>
+  <script src="app/codePrep/challengeController.js"></script>
+  <script src="app/codePrep/homeController.js"></script>
 
 </html>
 
