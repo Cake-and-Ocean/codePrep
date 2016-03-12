@@ -1,0 +1,25 @@
+[
+  {
+    "currentIndex": 1,
+    "nextIndex":    2,
+    "title":        "Test Challenge 1",
+    "description":  ["Do this awesome test challenge"],
+    "examples":     ["function(){var do = 'this is a test'"],
+    "results":      ["function(var is = 'also a test'"],
+    "tests":        ["expect(something(5)).to.be.a(test)"],
+    "solution":     ["function(final){is = 'a test'"],
+    "defaultValue": []
+  },
+  {
+    "currentIndex": 2,
+    "nextIndex":    3,
+    "title":        "Test Challenge 2",
+    "description":  ["Do this awesome test challenge (2)"],
+    "examples":     ["function(){var do = 'this is a test (2)'"],
+    "results":      ["function(var is = 'also a test (2)'"],
+    "tests":        ["expect(something(5)).to.be.a(test2)"],
+    "solution":     ["function(final){is = 'a test (2)'"],
+    "defaultValue": []
+  }
+
+]

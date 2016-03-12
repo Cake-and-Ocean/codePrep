@@ -1,19 +1,20 @@
-var app = angular.module('codePrep', []);
+var app = angular.module('codePrep', ['ui.router']);
 
-app.controller('MainCtrl', ['$scope', function($scope) {
-  $scope.name = 'World';
-}]);
+// app.controller('MainCtrl', ['$scope', function($scope) {
+//   $scope.name = 'World';
+// }]);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   //
   // For any unmatched url, redirect to /
-  $urlRouterProvider.otherwise("/");
+  $urlRouterProvider.otherwise('/');
   //
   // Now set up the states
   $stateProvider
-    .state('state1', {
-      url: "/state1",
-      templateUrl: "partials/state1.html"
+    .state('landing', {
+      url: '/',
+      templateUrl: 'app/landing/landing.html',
+      controller: 'LandingController'
     });
 
 });
