@@ -82,29 +82,29 @@ module.exports = function (app, passport) {
   // ==============================================
   // login
   // ==============================================
-  app.get('/login', function (req, res) {
-    res.sendFile(path + '/public/login.html', {message: req.flash('loginMessage') });
-  });
-
-  app.post('/login', passport.authenticate('local-login', {
-    successRedirect : '/profile', // redirect to the secure profile section
-    failureRedirect : '/login', // redirect back to the signup page if there is an error
-    failureFlash : true // allow flash messages
-  }));
+  //app.get('/login', function (req, res) {
+  //  res.sendFile(path + '/public/login.html', {message: req.flash('loginMessage') });
+  //});
+  //
+  //app.post('/login', passport.authenticate('local-login', {
+  //  successRedirect : '/profile', // redirect to the secure profile section
+  //  failureRedirect : '/login', // redirect back to the signup page if there is an error
+  //  failureFlash : true // allow flash messages
+  //}));
 
 
   // ==============================================
   // Signup
   // ==============================================
-  app.get('/signup', function(req, res) {
-    res.sendFile(path + '/public/signup.html', {message: req.flash('signupMessage') });
-  });
-
-  app.post('/signup', passport.authenticate('local-signup', {
-    successRedirect: '/profile',
-    failureRedirect: '/login',
-    failureFlash: true
-  }));
+  //app.get('/signup', function(req, res) {
+  //  res.sendFile(path + '/public/signup.html', {message: req.flash('signupMessage') });
+  //});
+  //
+  //app.post('/signup', passport.authenticate('local-signup', {
+  //  successRedirect: '/profile',
+  //  failureRedirect: '/login',
+  //  failureFlash: true
+  //}));
 
 
   // ==============================================
@@ -119,21 +119,21 @@ module.exports = function (app, passport) {
   // ==============================================
   // profile
   // ==============================================
-  app.get('/profile', isLoggedIn, function (req, res) {
-    res.sendFile(path + '/public/profile.html', {user : req.user} );
-  });
-
-  app.get('/api/:id', isLoggedIn, function (req, res) {
-    res.json(req.user);
-  });
+  //app.get('/profile', isLoggedIn, function (req, res) {
+  //  res.sendFile(path + '/public/profile.html', {user : req.user} );
+  //});
+  //
+  //app.get('/api/:id', isLoggedIn, function (req, res) {
+  //  res.json(req.user);
+  //});
 
 
   // ==============================================
   // Authentication Routines
   // ==============================================
-  app.get('/login', function(req, res) {
-    res.sendFile(path + '/public/login.html', { message: req.flash('loginMessage') });
-  });
+  //app.get('/login', function(req, res) {
+  //  res.sendFile(path + '/public/login.html', { message: req.flash('loginMessage') });
+  //});
 
 
 };
