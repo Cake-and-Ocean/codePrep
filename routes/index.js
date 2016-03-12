@@ -132,23 +132,4 @@ module.exports = function (app, passport) {
   });
 
 
-
-
-
-  // =============================================================================
-  // AUTHORIZE (ALREADY LOGGED IN / CONNECTING OTHER SOCIAL ACCOUNT) =============
-  // =============================================================================
-
-  // Local - Email
-  app.get('/connect/local', function(req, res) {
-    res.sendFile(path + '/public/connect-local.html', { message: req.flash('loginMessage') });
-  });
-  app.post('/connect/local', passport.authenticate('local-signup', {
-    successRedirect : '/profile',
-    failureRedirect : '/connect/local',
-    failureFlash : true
-  }));
-
-
-
 };
