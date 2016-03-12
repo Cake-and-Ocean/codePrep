@@ -9,7 +9,6 @@ var Challenge = new Schema({
     title:        String,
     description:  Array,
     examples:     Array,
-    results:      Array,
     tests:        Array,
     solution:     Array,
     defaultValue: Array
