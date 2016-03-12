@@ -15,6 +15,16 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/',
       templateUrl: 'app/landing/landing.html',
       controller: 'LandingController'
+    })
+    .state('signup', {
+      url: '/signup',
+      templateUrl: 'app/user/signup.html',
+      controller: 'SignupController'
+    })
+    .state('login', {
+      url: '/login',
+      templateUrl: 'app/user/login.html',
+      controller: 'LoginController'
     });
 
 });
