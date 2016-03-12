@@ -13,33 +13,69 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('landing', {
       url: '/',
-      templateUrl: 'app/landing/landing.html',
-      controller: 'LandingController'
+      views: {
+        content: {
+          templateUrl: 'app/landing/landing.html',
+          controller: 'LandingController'
+        }
+      }
     })
     .state('signup', {
       url: '/signup',
-      templateUrl: 'app/user/signup.html',
-      controller: 'SignupController'
+      views: {
+        content: {
+          templateUrl: 'app/user/signup.html',
+          controller: 'SignupController'
+        }
+      }
     })
     .state('login', {
       url: '/login',
-      templateUrl: 'app/user/login.html',
-      controller: 'LoginController'
+      views: {
+        content: {
+          templateUrl: 'app/user/login.html',
+          controller: 'LoginController'
+        }
+      }
     })
     .state('profile', {
       url: '/profile',
-      templateUrl: 'app/user/profile.html',
-      controller: 'ProfileController'
+      views: {
+        nav: {
+          templateUrl: 'app/nav/nav.html',
+          controller: 'NavController'
+        },
+        content: {
+          templateUrl: 'app/user/profile.html',
+          controller: 'ProfileController'
+        }
+      }
     })
     .state('home', {
       url: '/home',
-      templateUrl: 'app/codePrep/home.html',
-      controller: 'HomeController'
+      views: {
+        nav: {
+          templateUrl: 'app/nav/nav.html',
+          controller: 'NavController'
+        },
+        content: {
+          templateUrl: 'app/codePrep/home.html',
+          controller: 'HomeController'
+        }
+      }
     })
     .state('challenge', {
       url: '/challenge/:id',
-      templateUrl: 'app/codePrep/challenge.html',
-      controller: 'ChallengeController'
+      views: {
+        nav: {
+          templateUrl: 'app/nav/nav.html',
+          controller: 'NavController'
+        },
+        content: {
+          templateUrl: 'app/codePrep/challenge.html',
+          controller: 'ChallengeController'
+        }
+      }
     });
 
 });
