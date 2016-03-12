@@ -1,3 +1,3 @@
 app.controller('ChallengeController', ['$scope', function($scope) {
-  $scope.name = 'World';
+  var myCodeMirror = CodeMirror(document.body);
 }]);
