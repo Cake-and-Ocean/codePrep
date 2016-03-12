@@ -17,12 +17,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
       controller: 'LandingController'
     })
     .state('signup', {
-      url: '/Signup',
+      url: '/signup',
       templateUrl: 'app/user/signup.html',
       controller: 'SignupController'
     })
     .state('login', {
-      url: '/Login',
+      url: '/login',
       templateUrl: 'app/user/login.html',
       controller: 'LoginController'
     })

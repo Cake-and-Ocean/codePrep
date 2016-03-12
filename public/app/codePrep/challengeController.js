@@ -1,5 +1,5 @@
-app.controller('ChallengeController', ['$scope', function($scope) {
-  // var myCodeMirror = CodeMirror(document.getElementById('code'));
+app.controller('ChallengeController', ['$scope', '$http', function($scope, $http) {
+
   var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
     autoCloseBrackets: false,
     foldGutter: true,
@@ -13,12 +13,40 @@ app.controller('ChallengeController', ['$scope', function($scope) {
     theme: "monokai"
   });
 
-  $scope.code = 'howdy there';
-  $scope.test = 'testy';
 
-  $scope.log = function(){
-    console.log($scope.code);
-    console.log($scope.test);
+
+  var originalCode = "var palindrome = function(str){\n  return str;\n};\n"; 
+
+  editor.setValue(originalCode);
+
+
+  $scope.reset = function(){
+    editor.setValue(originalCode);
+  };
+
+  $scope.submit = function(){
+    var code = editor.getValue();
+    var backup = code;
+    //append the function code
+
+    var repl = new ReplitClient(
+      'api.repl.it',
+      '80',
+      'nodejs',
+        {
+         "time_created": 1457813501021,
+         "msg_mac": "CVT++OppJtvFjCOGp9TAOaZKzWRzhMXZr7dEY15GHbQ="
+        }
+    );
+    repl.connect().then(function() {
+        return repl.evaluate(code, {stdout: function(out) { console.log(out);} } );
+    }).then(function(result) {
+        alert(result.data);
+        console.log('result: ', result.error || result.data);
+    }, function(err){
+      console.log('Error: ', err);  
+    });
+    console.log('report bug button clicked');
   };
 
 }]);
