@@ -8,16 +8,6 @@ html {
   color: #008aa2;
 }
 
-.btn-default {
-  padding: 5px 17px;
-  background-color: #ec9702;
-  border-color: #ffc254;
-  border-radius: 4px;
-  font-size: 16px;
-  color: white;
-  width: 80%;
-}
-
 .form-control {
   border-radius: 100px;
   background-color: #eee;
@@ -74,6 +64,16 @@ hr {
   width: 50%;
 }
 
+.btnSignup {
+  padding: 5px 17px;
+  background-color: #ec9702;
+  border-color: #ffc254;
+  border-radius: 4px;
+  font-size: 16px;
+  color: white;
+  width: 90%;
+}
+
 /* CSS for SignUp Page */
 
 #contentSignup {
@@ -86,6 +86,16 @@ hr {
   padding: 30px 40px 30px 40px;
   box-shadow: 0px 0px 8px #bbb;
   width: 50%;
+}
+
+.btnSignup {
+  padding: 5px 17px;
+  background-color: #ec9702;
+  border-color: #ffc254;
+  border-radius: 4px;
+  font-size: 16px;
+  color: white;
+  width: 90%;
 }
 
 
