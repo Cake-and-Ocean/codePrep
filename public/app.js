@@ -26,6 +26,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: 'app/user/login.html',
       controller: 'LoginController'
     })
+    .state('profile', {
+      url: '/profile',
+      templateUrl: 'app/user/profile.html',
+      controller: 'ProfileController'
+    })
     .state('home', {
       url: '/home',
       templateUrl: 'app/codePrep/home.html',
