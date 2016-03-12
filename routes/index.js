@@ -1,15 +1,3 @@
-var express = require('express');
-var router = express.Router();
-var path = process.cwd();
-
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.sendfile(path + '/public/index.html');
-});
-
-module.exports = router;
-
-
 'use strict';
 
 var path = process.cwd();
@@ -30,48 +18,6 @@ module.exports = function (app, passport) {
   // ==============================================
   app.get('/', function (req, res) {
     res.sendFile(path + '/public/index.html');
-  });
-
-  // ==============================================
-  // Interview Questions
-  // ==============================================
-  app.get('/questions', function (req, res) {
-    res.sendFile(path + '/public/questions.html');
-  });
-
-  // ==============================================
-  // Interview Quiz
-  // ==============================================
-  app.get('/quiz', function (req, res) {
-    res.sendFile(path + '/public/quiz.html');
-  });
-
-  // ==============================================
-  // About Page
-  // ==============================================
-  app.get('/about', function (req, res) {
-    res.sendFile(path + '/public/about.html');
-  });
-
-  // ==============================================
-  // Blog
-  // ==============================================
-  app.get('/blog', function (req, res) {
-    res.sendFile(path + '/public/blog.html');
-  });
-
-  // ==============================================
-  // Privacy
-  // ==============================================
-  app.get('/privacy', function (req, res) {
-    res.sendFile(path + '/public/privacy.html');
-  })
-
-  // ==============================================
-  // Contact
-  // ==============================================
-  app.get('/contact', function (req, res) {
-    res.sendFile(path + '/public/contact.html');
   });
 
 
@@ -102,6 +48,7 @@ module.exports = function (app, passport) {
     failureFlash: true
   }));
 
+
   // ==============================================
   // logout
   // ==============================================
@@ -122,11 +69,10 @@ module.exports = function (app, passport) {
     res.json(req.user);
   });
 
+
   // ==============================================
   // Authentication Routines
   // ==============================================
-
-  // Local - Email Authentication
   app.get('/login', function(req, res) {
     res.sendFile(path + '/public/login.html', { message: req.flash('loginMessage') });
   });
