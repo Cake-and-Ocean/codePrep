@@ -25,6 +25,16 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/login',
       templateUrl: 'app/user/login.html',
       controller: 'LoginController'
+    })
+    .state('home', {
+      url: '/home',
+      templateUrl: 'app/codePrep/home.html',
+      controller: 'HomeController'
+    })
+    .state('challenge', {
+      url: '/challenge/:id',
+      templateUrl: 'app/codePrep/challenge.html',
+      controller: 'ChallengeController'
     });
 
 });
