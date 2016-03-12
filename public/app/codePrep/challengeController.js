@@ -25,7 +25,7 @@ app.controller('ChallengeController', ['$scope', '$http', function($scope, $http
   };
 
   $scope.submit = function(){
-    var code = editor.getValue();
+    var code = editor.getValue() + "palindrome('eric');";
     var backup = code;
     //append the function code
 
