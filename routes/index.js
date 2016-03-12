@@ -26,7 +26,25 @@ module.exports = function (app, passport) {
   // seed database with challenges
   // ==============================================
   app.post('/seed', function(req, res) {
-    console.log('seed body', req.body);
+    var newChallenge = new Challenge();
+
+    newChallenge.currentIndex = req.body.currentIndex;
+    newChallenge.nextIndex = req.body.nextIndex;
+    newChallenge.title = req.body.title;
+    newChallenge.description = req.body.description;
+    newChallenge.examples = req.body.examples;
+    newChallenge.tests = req.body.tests;
+    newChallenge.solution = req.body.solution;
+    newChallenge.defaultValue = req.body.defaultValue;
+
+    newChallenge.save(function (err) {
+      if (err) {
+        throw err;
+      }
+
+      res.json(newChallenge);
+    });
+
   });
 
 
