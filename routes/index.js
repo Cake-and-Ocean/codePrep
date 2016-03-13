@@ -56,9 +56,9 @@ module.exports = function (app, passport) {
   // Return a single challenge
   // ==============================================
   app.get('/challenge/:id', function(req, res) {
-    var id = Number(req.params.id);
+    var id = req.params.id;
 
-    Handler.findByChallengeNumber(id, function(err, challenge) {
+    Handler.findById(id, function(err, challenge) {
       if (err) {
         return res.status(400).json({ error: err });
       }
