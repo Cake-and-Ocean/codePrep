@@ -1,4 +1,4 @@
-/* CSS for Multiple pages-shared between login, signup and landing pages */ 
+/* CSS for Multiple pages-shared between login, signup and landing pages */
 
 html {
   height: 100%;
@@ -119,11 +119,11 @@ hr {
   top: 25%;
   margin: 0 auto;
   padding-bottom: 1%;
-  
+
 }
 
 .homeHeading {
-  text-align: center; 
+  text-align: center;
   font-family: Lato;
   border-radius: 15px;
   padding-top: 1%;
@@ -153,15 +153,20 @@ hr {
   margin-bottom: 15px;
 }
 
+.challengeDetails {
+  border-right: 1px solid #1d75b3;
+
+}
+.challengeButtons {
+  margin-top: 10px;
+}
+.challengeButtons .btn {
+  margin-right: 10px;
+}
 
 
 
 
-/* 
-  margin-left: 40%;
-  margin-right: 40%;
-
-*/
 
 
 
