@@ -25,7 +25,6 @@
     "codemirror": "~5.12.0",
     "jshint": "~2.9.1",
     "jsonlint": "~1.6.0",
-    "angular-ui-codemirror": "~0.3.0",
-    "angular-route": "~1.5.0"
+    "angular-ui-codemirror": "~0.3.0"
   }
 }
