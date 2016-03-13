@@ -5,7 +5,6 @@ app.factory('Auth', ['$http', '$location', function($http, $location) {
       auth = obj;
     }
     function get () {
-      console.log(auth);
       return auth;
     }
     return {
@@ -19,7 +18,6 @@ app.factory('Auth', ['$http', '$location', function($http, $location) {
       email: 'test1@fakeGmail.com',
       password: 'asdf123'
     }).then(function(res){
-      console.log(res);
       isAuth.set({email: res.email});
       callback();
     }, function(err){
@@ -33,7 +31,6 @@ app.factory('Auth', ['$http', '$location', function($http, $location) {
       email: 'test1@fakeGmail.com',
       password: 'asdf123'
     }).then(function(res){
-      console.log(res);
       isAuth.set({email: res.email});
       callback();
     }, function(err){

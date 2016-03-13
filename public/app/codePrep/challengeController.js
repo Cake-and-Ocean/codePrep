@@ -12,10 +12,11 @@ app.controller('ChallengeController', ['$scope', '$http', '$location', function(
     mode: "javascript",  //TODO this value will be set by the language the user selects
     theme: "monokai"
   });
-  console.log($location.search());
+  var challengeId = $location.search().id;
+  console.log(challengeId);
 
    //$http.get('/challenge/' + id).then(function(res){
-  $http.get('/challenge/1').then(function(res){
+  $http.get('/challenge/' + challengeId).then(function(res){
      $scope.challengeDetails = res.data[0];
    }, function(err){
      console.log('Error', err);
