@@ -2,21 +2,23 @@
   <div class="col-md-4 col-xs-12 challengeDetails">
 
     <div class="title text-center">
-      <h2>Palindrome{{title}}</h2>
+      <h2>{{challengeDetails.title}}</h2>
     </div>
 
     <h3>Description</h3>
-    <div class="description">Create a Palindrome function that will have one input paramter that is a string.<br />
-                             Return true or false if the string is a palindrome. {{description}}</div>
+    <div class="description" ng-repeat="descr in challengeDetails.description">
+        <p>{{descr}}</p>
+    </div>
 
     <h3>Examples</h3>
-    <div class="examples">For example if your Palindrome function is sent the string 'dad' then it should return true.<br />
-                          It should return false if passed the string 'foobar'.{{examples}}</div>
+    <div class="examples" ng-repeat="examp in challengeDetails.examples">
+        <p>{{examp}}</p>
+    </div>
 
     <h3>Tests</h3>
-    <div class="tests">Palindrome('dad') should return true<br />
-                       Palindrome('foobar') should return false<br />
-                       Palindrome('able was I ere I saw Elba') should return true{{tests}}</div>
+    <div class="tests" ng-repeat="test in challengeDetails.tests">
+        <p>{{test.test}} should return {{test.result}}</p>
+    </div>
 
   </div>
   <div class="col-md-8 col-xs-12">

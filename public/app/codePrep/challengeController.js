@@ -14,13 +14,15 @@ app.controller('ChallengeController', ['$scope', '$http', '$location', function(
   });
   console.log($location.search());
 
-  // $http.get('/challenge/' + id).then(function(res){
-  //   $scope.challengeDetails = res.data;
-  // }, function(err){
-  //   console.log('Error', err);
-  // });
+   //$http.get('/challenge/' + id).then(function(res){
+  $http.get('/challenge/1').then(function(res){
+     $scope.challengeDetails = res.data[0];
+   }, function(err){
+     console.log('Error', err);
+   });
 
-  var originalCode = "var palindrome = function(str){\n  return str;\n};\n"; 
+
+  var originalCode = "var palindrome = function(str){\n  return str;\n};\n";
 
   editor.setValue(originalCode);
 
@@ -49,7 +51,7 @@ app.controller('ChallengeController', ['$scope', '$http', '$location', function(
         alert(result.data);
         console.log('result: ', result.error || result.data);
     }, function(err){
-      console.log('Error: ', err);  
+      console.log('Error: ', err);
     });
     console.log('report bug button clicked');
   };
