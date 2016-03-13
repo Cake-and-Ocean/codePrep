@@ -4,7 +4,6 @@ var LocalStrategy = require('passport-local').Strategy;
 
 
 var User = require('../models/users');
-//var configAuth = require('./auth');
 
 module.exports = function (passport) {
 
@@ -35,6 +34,7 @@ module.exports = function (passport) {
 
                 // asynchronous
                 process.nextTick(function() {
+
                     User.findOne({ 'email' :  email }, function(err, user) {
                         // if there are any errors, return the error
                         if (err)
@@ -63,6 +63,9 @@ module.exports = function (passport) {
                 passReqToCallback : true // allows us to pass back the entire request to the callback
             },
             function(req, email, password, done) {
+                console.log('-------------');
+                console.log('email', email);
+                console.log('password', password);
 
                 if (email) {
                     email = email.toLowerCase(); // Use lower-case e-mails to avoid case-sensitive e-mail matching
@@ -128,14 +131,8 @@ module.exports = function (passport) {
                 });
 
 
-            }));
-
-
-
-
-
-
-
+            }
+    ));
 
 
 };
