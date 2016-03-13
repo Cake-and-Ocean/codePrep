@@ -1,6 +1,6 @@
 app.factory('Auth', ['$http', '$location', function($http, $location) {
   var isAuth = (function isAuth(){
-    var auth = true;
+    var auth = false;
     function set (obj) {
       auth = obj;
     }
