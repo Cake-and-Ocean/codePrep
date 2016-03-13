@@ -4,7 +4,7 @@
       <i class="fa fa-laptop fa-5x lap"></i>
     <div class="container">
       <div class="col-md-6 col-md-offset-3 col-xs-12">
-        <button class="btn btn-primary btn-lg btn-block challengelist" ng-repeat="challenge in challenges">{{ challenge.title }}</button>
+        <button ng-click="goToChallenge($index)" class="btn btn-primary btn-lg btn-block challengelist" ng-repeat="challenge in challenges">{{ challenge.title }}</button>
       </div>
     </div>
     </div>

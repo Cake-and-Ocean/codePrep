@@ -1,15 +1,7 @@
-app.controller('SignupController', ['$scope', '$state', '$http', function($scope, $state, $http) {
+app.controller('SignupController', ['$scope', '$location', 'Auth', function($scope, $location, Auth) {
   $scope.signup = function(){
-    $state.go('home');
+    Auth.signup({email: 'email', password: 'pw'}, function(){
+      $location.path('/home');
+    });
   };
-
-  $http.post('/signup', {
-    email: 'test1@fakeGmail.com',
-    password: 'asdf123'
-  }).then(function(res){
-    console.log(res);
-  }, function(err){
-    console.log('Error: ', err);
-  });
-
 }]);

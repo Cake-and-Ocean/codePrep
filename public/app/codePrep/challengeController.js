@@ -1,4 +1,4 @@
-app.controller('ChallengeController', ['$scope', '$http', function($scope, $http) {
+app.controller('ChallengeController', ['$scope', '$http', '$location', function($scope, $http, $location) {
 
   var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
     autoCloseBrackets: false,
@@ -12,9 +12,11 @@ app.controller('ChallengeController', ['$scope', '$http', function($scope, $http
     mode: "javascript",  //TODO this value will be set by the language the user selects
     theme: "monokai"
   });
+  var challengeId = $location.search().id;
+  console.log(challengeId);
 
    //$http.get('/challenge/' + id).then(function(res){
-  $http.get('/challenge/1').then(function(res){
+  $http.get('/challenge/' + challengeId).then(function(res){
      $scope.challengeDetails = res.data[0];
    }, function(err){
      console.log('Error', err);
