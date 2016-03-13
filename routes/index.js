@@ -113,7 +113,7 @@ module.exports = function (app, passport) {
       }
 
       return res.json(result);
-    })
+    });
   });
 
 
@@ -154,7 +154,7 @@ module.exports = function (app, passport) {
   // ==============================================
   app.get('/logout', function (req, res) {
     req.logout();
-    res.redirect('/login');
+    res.redirect('/');
   });
 
 

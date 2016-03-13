@@ -18,7 +18,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
           templateUrl: 'app/landing/landing.html',
           controller: 'LandingController'
         }
-      }
+      },
+      onEnter: ['Auth', '$state', function(Auth, $location){
+        if (Auth.isAuth()){
+          $location.path('/home');
+        }
+      }]
     })
     .state('signup', {
       url: '/signup',
@@ -27,7 +32,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
           templateUrl: 'app/user/signup.html',
           controller: 'SignupController'
         }
-      }
+      },
+      onEnter: ['Auth', '$location', function(Auth, $location){
+        if (Auth.isAuth()){
+          $location.path('/home');
+        }
+      }]
     })
     .state('login', {
       url: '/login',
@@ -36,7 +46,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
           templateUrl: 'app/user/login.html',
           controller: 'LoginController'
         }
-      }
+      },
+      onEnter: ['Auth', '$location', function(Auth, $location){
+        if (Auth.isAuth()){
+          $location.path('/home');
+        }
+      }]
     })
     .state('profile', {
       url: '/profile',
@@ -49,7 +64,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
           templateUrl: 'app/user/profile.html',
           controller: 'ProfileController'
         }
-      }
+      },
+      onEnter: ['Auth', '$location', function(Auth, $location){
+        if (!Auth.isAuth()){
+          $location.path('/login');
+        }
+      }]
     })
     .state('home', {
       url: '/home',
@@ -62,7 +82,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
           templateUrl: 'app/codePrep/home.html',
           controller: 'HomeController'
         }
-      }
+      },
+      onEnter: ['Auth', '$location', function(Auth, $location){
+        if (!Auth.isAuth()){
+          $location.path('/login');
+        }
+      }]
     })
     .state('challenge', {
       url: '/challenge/:id',
@@ -75,7 +100,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
           templateUrl: 'app/codePrep/challenge.html',
           controller: 'ChallengeController'
         }
-      }
+      },
+      onEnter: ['Auth', '$location', function(Auth, $location){
+        if (!Auth.isAuth()){
+          $location.path('/login');
+        }
+      }]
     });
 
 });
