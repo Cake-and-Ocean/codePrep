@@ -23,6 +23,7 @@ html {
   font-family: Lato;
   color: white;
   height: 700px;
+  margin-top: -20px;
 }
 
 #content_landing {
@@ -50,6 +51,7 @@ hr {
   background: url(https://member.virginpulse.com/v2/content/images/LandingPageV3/bg-pattern.png);
   background-position: center;
   height: 700px;
+  margin-top: -20px;
 }
 
 #contentLanding {
@@ -97,6 +99,73 @@ hr {
   color: white;
   width: 90%;
 }
+
+/* Home.html page styling elements */
+
+.headingBackground {
+  background: url(https://images.unsplash.com/photo-1429051883746-afd9d56fbdaf?crop=entropy&dpr=2&fit=crop&fm=jpg&h=575&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1025);
+  background-position: center;
+  height: 700px;
+  margin-top: -20px;
+  position: relative;
+  min-height: 100%;
+  background-size: cover;
+  background-attachment:fixed;
+}
+
+.headingBox {
+/*  background: rgba(100,255,255,0.8);
+  box-shadow: 12px 12px 8px rgba(255,255,255,0.6);*/
+  position: relative;
+  border-radius: 15px;
+  top: 25%;
+  margin-left: 18%;
+  margin-right: 18%;
+  padding-bottom: 1%;
+  
+}
+
+.homeHeading {
+  text-align: center; 
+  font-family: Lato;
+  border-radius: 15px;
+  padding-top: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  color: white;
+}
+
+.listDiv {
+  margin-left: auto;
+  padding-left: 30%;
+  padding-right: 30%;
+  color: white;
+}
+
+.homeList {
+  font-size: 30px;
+  display:inline-block;
+}
+
+/*i {
+  margin-left: 40%;
+  margin-right: 45%;
+}
+*/
+
+.lap {
+  color: white;
+  margin-left: 40%;
+  margin-right: 45%;
+}
+
+/* Notes 
+
+
+
+
+*/
+
 
 
 

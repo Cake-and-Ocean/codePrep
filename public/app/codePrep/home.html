@@ -1,3 +1,17 @@
-<ul>
-  <li ng-repeat="challenge in challenges">{{challenge}}</li>
-</ul>
+<div class="headingBackground">
+  <div class="headingBox">
+    <h1 class="homeHeading">Select a Challenge</h1>
+      <i class="fa fa-laptop fa-5x lap"></i>
+    <div class="container listDiv">
+      <ol class="homeList">
+        <li ng-repeat="challenge in challenges">{{ challenge.title }}</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- li><a href="#/login"></a> -->
