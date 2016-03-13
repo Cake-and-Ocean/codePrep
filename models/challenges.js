@@ -19,7 +19,7 @@ var Challenge = new Schema({
         required:   true
     },
     description: {
-        type:       Array
+        type:       Array,
         required:   true
     },
     examples: {
@@ -32,7 +32,7 @@ var Challenge = new Schema({
         type:       Array
     },
     defaultValue: {
-        type:       Array
+        type:       Array,
         required:   true
     }
 });

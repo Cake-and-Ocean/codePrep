@@ -103,7 +103,7 @@ module.exports = function (app, passport) {
   // ==============================================
   // User a Users Challenge
   // ==============================================
-  app.post('/userChallenge/:email/:id', function(res, res) {
+  app.post('/userChallenge/:email/:id', function(req, res) {
     var id = req.params.id;
     var email = req.params.id;
 
@@ -120,10 +120,10 @@ module.exports = function (app, passport) {
   // ==============================================
   // login
   // // ==============================================
-  // app.get('/login', function (req, res) {
-  //  res.sendFile(path + '/public/login.html', {message: req.flash('loginMessage') });
-  // });
-  //
+   app.get('/login', function (req, res) {
+    res.sendFile(path + '/public/login.html', {message: req.flash('loginMessage') });
+   });
+
   app.post('/login', passport.authenticate('local-login', {
    successRedirect : '/profile', // redirect to the secure profile section
    failureRedirect : '/login', // redirect back to the signup page if there is an error
