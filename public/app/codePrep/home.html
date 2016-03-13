@@ -2,14 +2,14 @@
   <div class="headingBox">
     <h1 class="homeHeading">Select a Challenge</h1>
       <i class="fa fa-laptop fa-5x lap"></i>
-    <div class="container listDiv">
-      <ol class="homeList">
-        <li ng-repeat="challenge in challenges">{{ challenge.title }}</li>
-      </ol>
+    <div class="container">
+      <div class="col-md-6 col-md-offset-3 col-xs-12">
+        <button class="btn btn-primary btn-lg btn-block challengelist" ng-repeat="challenge in challenges">{{ challenge.title }}</button>
+      </div>
+    </div>
     </div>
   </div>
 </div>
-
 
 
 
