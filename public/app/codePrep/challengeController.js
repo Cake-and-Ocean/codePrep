@@ -13,7 +13,7 @@ app.controller('ChallengeController', ['$scope', '$http', '$location', function(
     theme: "monokai"
   });
   var challengeId = $location.search().id;
-  console.log(challengeId);
+  console.log('challengeID',challengeId);
 
    //$http.get('/challenge/' + id).then(function(res){
   $http.get('/challenge/' + challengeId).then(function(res){
