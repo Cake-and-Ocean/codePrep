@@ -1,10 +1,11 @@
-app.factory('Auth', ['$state', function() {
+app.factory('Auth', ['$http', '$location', function($http, $location) {
   var isAuth = (function isAuth(){
-    var auth = false;
+    var auth = true;
     function set (obj) {
       auth = obj;
     }
     function get () {
+      console.log(auth);
       return auth;
     }
     return {
@@ -13,25 +14,31 @@ app.factory('Auth', ['$state', function() {
     };
   })();
 
-  var signup = function(){
+  var signup = function(data, callback){
     $http.post('/signup', {
       email: 'test1@fakeGmail.com',
       password: 'asdf123'
     }).then(function(res){
-      isAuth.set({email: res.body.email});
+      console.log(res);
+      isAuth.set({email: res.email});
+      callback();
     }, function(err){
       console.log('Error: ', err);
+      alert('login failure');
     });
   };
 
-  var login = function(){
+  var login = function(data, callback){
     $http.post('/login', {
       email: 'test1@fakeGmail.com',
       password: 'asdf123'
     }).then(function(res){
-      isAuth.set({email: res.body.email});
+      console.log(res);
+      isAuth.set({email: res.email});
+      callback();
     }, function(err){
       console.log('Error: ', err);
+      alert('login failure');
     });
   };
 

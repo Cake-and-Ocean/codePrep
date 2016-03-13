@@ -1,8 +1,7 @@
-app.controller('SignupController', ['$scope', '$state', function($scope, $state) {
+app.controller('SignupController', ['$scope', '$location', 'Auth', function($scope, $location, Auth) {
   $scope.signup = function(){
-    $state.go('home');
+    Auth.signup({email: 'email', password: 'pw'}, function(){
+      $location.path('/home');
+    });
   };
-
-
-
 }]);

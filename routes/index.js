@@ -124,11 +124,15 @@ module.exports = function (app, passport) {
     res.sendFile(path + '/public/login.html', {message: req.flash('loginMessage') });
    });
 
-  app.post('/login', passport.authenticate('local-login', {
-   successRedirect : '/profile', // redirect to the secure profile section
-   failureRedirect : '/login', // redirect back to the signup page if there is an error
-   failureFlash : true // allow flash messages
-  }));
+  // app.post('/login', passport.authenticate('local-login', {
+  //  successRedirect : '/profile', // redirect to the secure profile section
+  //  failureRedirect : '/login', // redirect back to the signup page if there is an error
+  //  failureFlash : true // allow flash messages
+  // }));
+
+  app.post('/login', passport.authenticate('local-login'), function(req, res){
+    res.send({email: req.body.email});
+  });
 
 
   // ==============================================
@@ -145,7 +149,7 @@ module.exports = function (app, passport) {
   // }));
 
   app.post('/signup', passport.authenticate('local-signup'), function(req, res){
-    res.send(req.body.email);
+    res.send({email: req.body.email});
   });
 
 

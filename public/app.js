@@ -19,7 +19,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
           controller: 'LandingController'
         }
       },
-      onEnter: ['Auth', '$state', function(Auth, $location){
+      onEnter: ['Auth', '$location', function(Auth, $location){
         if (Auth.isAuth()){
           $location.path('/home');
         }
