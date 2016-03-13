@@ -5,6 +5,10 @@
         <h2>{{challengeDetails.title}}</h2>
     </div>
 
+    <div id="time1">
+      <h2 class="time text-center" id="timerOne">10:00</h2>
+    </div>
+
     <h3>Description</h3>
     <div class="description" ng-repeat="descr in challengeDetails.description">
         <p>{{descr}}</p>
@@ -17,8 +21,9 @@
 
     <h3>Tests</h3>
     <div class="tests" ng-repeat="test in challengeDetails.tests">
-        <p>{{test.test}} should return {{test.result}}</p>
+        <span ng-if="submitted"><i class="fa fa-check green-color"></i></span><span ng-if="!submitted"><i class="fa fa-times red-color"></i></span><span> {{test.test}} should return {{test.result}}</span><br />
     </div>
+
 
     </div>
 
