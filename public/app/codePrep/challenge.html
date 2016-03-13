@@ -1,8 +1,8 @@
 <div class="container-fluid">
-  <div class="col-md-4 col-xs-12 challengeDetails">
+    <div class="col-md-4 col-xs-12 challengeDetails">
 
     <div class="title text-center">
-      <h2>{{challengeDetails.title}}</h2>
+        <h2>{{challengeDetails.title}}</h2>
     </div>
 
     <h3>Description</h3>
@@ -20,16 +20,71 @@
         <p>{{test.test}} should return {{test.result}}</p>
     </div>
 
-  </div>
-  <div class="col-md-8 col-xs-12">
-    <form>
-      <textarea ng-model="code" id="code" name="code" rows="5"></textarea>
-    </form>
-    <div class="challengeButtons">
-      <button class="btn btn-lg btn-primary" ng-click="submit()">Submit</button>
-      <button class="btn btn-lg btn-warning" ng-click="reset()">Reset</button>
     </div>
-  </div>
+
+    <div class="col-md-8 col-xs-12">
+        <form>
+          <textarea ng-model="code" id="code" name="code" rows="5"></textarea>
+        </form>
+
+        <div class="challengeButtons">
+          <button class="btn btn-lg btn-primary" ng-click="submit()">Submit</button>
+          <button class="btn btn-lg btn-warning" ng-click="reset()">Reset</button>
+        </div>
+    </div>
+
+    <!--- modal questions -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="question1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Big O Notation</h4>
+                </div>
+                <div class="modal-body">
+                    <h3>What is the Big O Notation for your solution?</h3>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                            O(1) - constant
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            O(log n) - logarithmic
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                            O(n<sup>2</sup>) - quadratic
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
+                            O(n) - linear
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Submit Answer</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
 </div>
+
+<script>
+    $(document).ready(function() {
+        setTimeout(displayQuestion1, 60000);
+
+        function displayQuestion1() {
+            $('#question1').modal('show');
+        };
+
+    });
+</script>
 
