@@ -4,7 +4,6 @@ var LocalStrategy = require('passport-local').Strategy;
 
 
 var User = require('../models/users');
-//var configAuth = require('./auth');
 
 module.exports = function (passport) {
 
@@ -128,14 +127,8 @@ module.exports = function (passport) {
                 });
 
 
-            }));
-
-
-
-
-
-
-
+            }
+    ));
 
 
 };
