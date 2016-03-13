@@ -13,7 +13,11 @@ app.controller('ChallengeController', ['$scope', '$http', function($scope, $http
     theme: "monokai"
   });
 
-
+  // $http.get('/challenge/' + id).then(function(res){
+  //   $scope.challengeDetails = res.data;
+  // }, function(err){
+  //   console.log('Error', err);
+  // });
 
   var originalCode = "var palindrome = function(str){\n  return str;\n};\n"; 
 

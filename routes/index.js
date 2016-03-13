@@ -81,16 +81,16 @@ module.exports = function (app, passport) {
 
   // ==============================================
   // login
-  // ==============================================
-  //app.get('/login', function (req, res) {
+  // // ==============================================
+  // app.get('/login', function (req, res) {
   //  res.sendFile(path + '/public/login.html', {message: req.flash('loginMessage') });
-  //});
+  // });
   //
-  //app.post('/login', passport.authenticate('local-login', {
-  //  successRedirect : '/profile', // redirect to the secure profile section
-  //  failureRedirect : '/login', // redirect back to the signup page if there is an error
-  //  failureFlash : true // allow flash messages
-  //}));
+  app.post('/login', passport.authenticate('local-login', {
+   successRedirect : '/profile', // redirect to the secure profile section
+   failureRedirect : '/login', // redirect back to the signup page if there is an error
+   failureFlash : true // allow flash messages
+  }));
 
 
   // ==============================================
@@ -100,11 +100,16 @@ module.exports = function (app, passport) {
   //  res.sendFile(path + '/public/signup.html', {message: req.flash('signupMessage') });
   //});
   //
-  //app.post('/signup', passport.authenticate('local-signup', {
-  //  successRedirect: '/profile',
-  //  failureRedirect: '/login',
-  //  failureFlash: true
-  //}));
+  app.post('/signup', passport.authenticate('local-signup', {
+    successRedirect: '/profile',
+    failureRedirect: '/login',
+    failureFlash: true
+  }));
+
+  // app.post('/signup', passport.authenticate('local-signup'), function(req, res){
+  //   console.log(res);
+  //   res.redirect('/users/' + req.user.username);
+  // });
 
 
   // ==============================================
