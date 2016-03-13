@@ -5,7 +5,7 @@ app.controller('SignupController', ['$scope', '$state', '$http', function($scope
 
   $http.post('/signup', {
     username: 'e.king117@gmail.com',
-    password: 'asdf123',
+    password: 'asdf123'
   }).then(function(res){
     console.log(res);
   }, function(err){
