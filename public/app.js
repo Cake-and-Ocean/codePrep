@@ -21,7 +21,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       },
       onEnter: ['Auth', '$location', function(Auth, $location){
         if (Auth.isAuth()){
-          $location.path('/home');
+          $location.url('/home');
         }
       }]
     })
@@ -35,7 +35,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       },
       onEnter: ['Auth', '$location', function(Auth, $location){
         if (Auth.isAuth()){
-          $location.path('/home');
+          $location.url('/home');
         }
       }]
     })
@@ -49,7 +49,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       },
       onEnter: ['Auth', '$location', function(Auth, $location){
         if (Auth.isAuth()){
-          $location.path('/home');
+          $location.url('/home');
         }
       }]
     })
@@ -67,7 +67,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       },
       onEnter: ['Auth', '$location', function(Auth, $location){
         if (!Auth.isAuth()){
-          $location.path('/login');
+          $location.url('/login');
         }
       }]
     })
@@ -85,7 +85,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       },
       onEnter: ['Auth', '$location', function(Auth, $location){
         if (!Auth.isAuth()){
-          $location.path('/login');
+          $location.url('/login');
         }
       }]
     })
@@ -103,7 +103,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       },
       onEnter: ['Auth', '$location', function(Auth, $location){
         if (!Auth.isAuth()){
-          $location.path('/login');
+          $location.url('/login');
         }
       }]
     });
